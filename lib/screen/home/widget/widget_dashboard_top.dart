@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:quzz_app/core/constant/dashboard_color.dart';
+import 'package:quzz_app/screen/profile/widget/user_avatar.dart';
 
 class WidgetDashboardTop extends StatelessWidget {
   const WidgetDashboardTop({super.key});
@@ -93,10 +95,11 @@ Widget _buildheader(BuildContext context) {
   return Padding(
     padding: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
     child: Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         IconButton(
           onPressed: () {},
-          icon: Icon(Icons.arrow_back, color: Colors.white),
+          icon: Icon(Icons.menu, color: Colors.white),
           style: IconButton.styleFrom(
             backgroundColor: Colors.white.withValues(alpha: 0.2),
           ),
@@ -109,6 +112,14 @@ Widget _buildheader(BuildContext context) {
             fontSize: 24,
             fontWeight: FontWeight.bold,
           ),
+        ),
+        SizedBox(width: 20),
+        UserAvatar(
+          imageUrl: '',
+          size: 40,
+          onTap: () {
+            context.push('/profileuser');
+          },
         ),
       ],
     ),

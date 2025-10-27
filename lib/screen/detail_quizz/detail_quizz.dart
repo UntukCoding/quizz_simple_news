@@ -16,7 +16,7 @@ class _DetailQuizzState extends State<DetailQuizz> {
     return Scaffold(
       backgroundColor: Color(0xfff9ebff),
       body: Stack(
-        alignment: AlignmentGeometry.center,
+        alignment: AlignmentGeometry.topCenter,
         children: [
           WidgetDetailQuizzTop(),
           WidgetListQuizzDetail(),
