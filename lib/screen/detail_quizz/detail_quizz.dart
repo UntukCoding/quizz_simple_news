@@ -4,15 +4,7 @@ import 'package:quzz_app/screen/detail_quizz/widget/widget_list_quizz_detail.dar
 import 'package:quzz_app/screen/detail_quizz/widget/widget_tombol_detail_quizz.dart';
 
 class DetailQuizz extends StatefulWidget {
-  final String name;
-  final DateTime? dateTime;
-  final String description;
-  const DetailQuizz({
-    super.key,
-    required this.name,
-    required this.dateTime,
-    required this.description,
-  });
+  const DetailQuizz({super.key});
 
   @override
   State<DetailQuizz> createState() => _DetailQuizzState();
@@ -26,21 +18,9 @@ class _DetailQuizzState extends State<DetailQuizz> {
       body: Stack(
         alignment: AlignmentGeometry.center,
         children: [
-          // WidgetDetailQuizzTop(),
-          // WidgetListQuizzDetail(),
-          // WidgetTombolDetailQuizz(),
-          Align(
-            alignment: AlignmentGeometry.center,
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text(widget.name),
-                Text(widget.description),
-                Text(widget.dateTime.toString()),
-                //retrive value
-              ],
-            ),
-          ),
+          WidgetDetailQuizzTop(),
+          WidgetListQuizzDetail(),
+          WidgetTombolDetailQuizz(),
         ],
       ),
     );
