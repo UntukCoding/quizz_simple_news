@@ -1,5 +1,5 @@
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:quzz_app/services/Firebase_auth.dart';
+import 'package:quzz_app/services/firebase_auth.dart';
 
 class FirebaseAuthRepo {
   final FirebaseAuthNew firebaseAuthNew;
